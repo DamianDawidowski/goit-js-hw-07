@@ -1,7 +1,8 @@
 import { galleryItems } from "./gallery-items.js";
+
 const gallery = document.querySelector(".gallery");
 
-const markup = galleryItems
+const galleryCreate = galleryItems
   .map(
     (image) =>
       `<a class=gallery__item href=${image.original}>
@@ -11,7 +12,7 @@ const markup = galleryItems
 
   .join("");
 
-gallery.insertAdjacentHTML("beforeend", markup);
+gallery.insertAdjacentHTML("beforeend", galleryCreate);
 
 gallery.addEventListener("click", imageClick);
 
